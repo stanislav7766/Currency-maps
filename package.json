@@ -1,0 +1,56 @@
+{
+  "name": "bots-business-telegram",
+  "version": "1.0.1",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "eslint-test": "eslint -c ./.eslintrc.json ./src/**/*.js",
+    "dev": "nodemon",
+    "start": "cross-env NODE_ENV=production node --no-deprecation ./node_modules/.bin/forever start --uid=bots-business-telegram --append ./dist/index.js",
+    "stop": "forever stop bots-business-telegram"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.19.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^8.0.0",
+    "forever": "^1.0.0",
+    "googleplaces": "^0.6.1",
+    "html-table-to-json": "^0.4.0",
+    "husky": "^2.3.0",
+    "knex": "^0.17.5",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "objection": "^1.6.9",
+    "telegraf": "^3.30.1",
+    "urlencode": "^1.1.0",
+    "util": "^0.12.0",
+    "winston": "^3.2.1",
+    "winston-mail": "^1.5.2",
+    "winston-telegram": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn eslint-test",
+      "pre-push": "yarn eslint-test"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.17.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
