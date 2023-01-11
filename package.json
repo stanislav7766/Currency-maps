@@ -19,7 +19,7 @@
     "googleplaces": "^0.6.1",
     "html-table-to-json": "^0.4.0",
     "husky": "^2.3.0",
-    "knex": "^0.17.5",
+    "knex": "^2.4.0",
     "moment": "^2.24.0",
     "mysql": "^2.17.1",
     "objection": "^1.6.9",
